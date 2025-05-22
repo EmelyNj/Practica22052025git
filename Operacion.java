@@ -2,7 +2,7 @@ public class Operacion {
     public int Sumar(int a, int b) {
 
         if (a < 0 || b < 0) {
-            System.out.println("Error: No sse puede sumar  números negativos");
+            System.out.println("Error: No se pueden sumar  números negativos");
             return -1;
         }
 
@@ -15,5 +15,15 @@ public class Operacion {
 
     public int Sumar(int a, int b, int c) {
         return a + b + c;
+    }
+
+    public void imprimirNumerosImpares(int a) {
+        if (a%2 == 1) {
+            System.out.println("El número es par: " + a);
+        }
+        a--;
+        if(a>0){
+            imprimirNumerosImpares(a);
+        }
     }
 }
